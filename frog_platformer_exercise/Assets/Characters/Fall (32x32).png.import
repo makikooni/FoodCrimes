@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyulkx6yctxym"
-path="res://.godot/imported/End (Idle).png-387af11c9537f00eab43f14e3ccc1c3d.ctex"
+uid="uid://40raavn2pjru"
+path="res://.godot/imported/Fall (32x32).png-dd928a0d05758fb3cf264bd6f6851036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-387af11c9537f00eab43f14e3ccc1c3d.ctex"]
+source_file="res://Assets/Characters/Fall (32x32).png"
+dest_files=["res://.godot/imported/Fall (32x32).png-dd928a0d05758fb3cf264bd6f6851036.ctex"]
 
 [params]
 

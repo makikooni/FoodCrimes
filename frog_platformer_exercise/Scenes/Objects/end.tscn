@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqn2darxk3l6w"]
 
-[ext_resource type="Texture2D" uid="uid://dyulkx6yctxym" path="res://End (Idle).png" id="1_501g8"]
-[ext_resource type="Script" path="res://Scenes/end.gd" id="1_tkf02"]
+[ext_resource type="Texture2D" uid="uid://dyulkx6yctxym" path="res://Assets/Objects/End (Idle).png" id="1_501g8"]
+[ext_resource type="Script" path="res://Scenes/Objects/end.gd" id="1_tkf02"]
 
 [sub_resource type="PackedScene" id="PackedScene_rt3vh"]
 

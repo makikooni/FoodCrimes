@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=3 uid="uid://coykvwcsqgv0s"]
 
-[ext_resource type="Texture2D" uid="uid://bbqpjiy62r0ay" path="res://Idle (32x32).png" id="1_cssft"]
-[ext_resource type="Texture2D" uid="uid://40raavn2pjru" path="res://Fall (32x32).png" id="1_qdkku"]
-[ext_resource type="Texture2D" uid="uid://3cd8lgss4ct6" path="res://Run (32x32).png" id="3_4mnpt"]
+[ext_resource type="Texture2D" uid="uid://bbqpjiy62r0ay" path="res://Assets/Characters/Idle (32x32).png" id="1_cssft"]
+[ext_resource type="Texture2D" uid="uid://40raavn2pjru" path="res://Assets/Characters/Fall (32x32).png" id="1_qdkku"]
+[ext_resource type="Texture2D" uid="uid://3cd8lgss4ct6" path="res://Assets/Characters/Run (32x32).png" id="3_4mnpt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jutkm"]
 atlas = ExtResource("1_cssft")
