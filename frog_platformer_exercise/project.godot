@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Frog_Platformer_Exercise"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 
@@ -44,3 +49,4 @@ jump={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
