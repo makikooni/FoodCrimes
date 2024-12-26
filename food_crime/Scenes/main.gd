@@ -3,6 +3,7 @@ extends Node
 @onready var timer: Timer = %Timer
 @onready var hint_1: Label = %Hint1
 @onready var camera_2d: Camera2D = %Camera2D
+@onready var label: Label = $Label
 
 
 var button_on = false

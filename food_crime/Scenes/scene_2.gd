@@ -15,12 +15,22 @@ extends Node
 	$Node/ErrorMessage7,
 	$Node/ErrorMessage8
 ]
+@onready var messages := [
+	$messages/Label2,
+	$messages/Label3,
+	$messages/Label4,
+	$messages/Label5,
+	$messages/Label6,
+	$messages/Label7,
+	$messages/Label8
+]
 
 var press_count = 0
 
 func run_errors():
 	if press_count < error_messages.size():
 		error_messages[press_count].visible = true
+		messages[press_count].visible = true
 	else:
 		if button:
 			button.disconnect("pressed", _on_button_pressed)  # Correctly disconnect signal
