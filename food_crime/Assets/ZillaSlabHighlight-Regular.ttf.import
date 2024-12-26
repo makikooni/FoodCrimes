@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dcm3kjo8msrta"
-path="res://.godot/imported/ZillaSlabHighlight-Regular.ttf-118f0fa5aa5c45f734d745d927fedef6.fontdata"
+path="res://.godot/imported/ZillaSlabHighlight-Regular.ttf-6b272e85ba3b02a0967020ec68eb24ca.fontdata"
 
 [deps]
 
-source_file="res://ZillaSlabHighlight-Regular.ttf"
-dest_files=["res://.godot/imported/ZillaSlabHighlight-Regular.ttf-118f0fa5aa5c45f734d745d927fedef6.fontdata"]
+source_file="res://Assets/ZillaSlabHighlight-Regular.ttf"
+dest_files=["res://.godot/imported/ZillaSlabHighlight-Regular.ttf-6b272e85ba3b02a0967020ec68eb24ca.fontdata"]
 
 [params]
 

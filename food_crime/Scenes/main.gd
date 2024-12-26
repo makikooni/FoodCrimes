@@ -16,7 +16,7 @@ func hint_timer():
 		hint_1.show_hint("How do I \nswitch it\non...") #ref to the specific node not scene?
 	
 func _on_button_pressed() -> void:
-	#get_tree().change_scene_to_file("scene_path")
+	
 	button_on = true
 	print("button pressed")
 	hint_1.visible = false
@@ -30,6 +30,15 @@ func _on_button_pressed() -> void:
 	var new_offset = camera_2d.offset + target_offset
 	tween.tween_property(camera_2d, "offset", new_offset, 1.0)
 	
+	
+	
+	tween.finished.connect(Callable(self, "_on_tween_completed"))
+
+# This method will be called when the tween is complete
+func _on_tween_completed():
+	print("Camera animation completed, changing scene.")
+	# Change the scene after the animation completes
+	get_tree().change_scene_to_file("res://Scenes/scene2.tscn")
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

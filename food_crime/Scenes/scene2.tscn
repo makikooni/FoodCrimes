@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=3 uid="uid://blrpe3eoakn8s"]
+
+[ext_resource type="Script" path="res://Scenes/scene_2.gd" id="1_61rmi"]
+[ext_resource type="Texture2D" uid="uid://bhb6ut6mbccq7" path="res://Assets/background.png" id="2_gcgo6"]
+[ext_resource type="Texture2D" uid="uid://bmwypt5wec64e" path="res://Assets/pc.png" id="3_mbh7d"]
+[ext_resource type="PackedScene" uid="uid://bb6astalm73q5" path="res://Objects/Thoughts.tscn" id="4_me86y"]
+[ext_resource type="Script" path="res://Objects/thoughts.gd" id="5_ivrhc"]
+[ext_resource type="Texture2D" uid="uid://cmctmlf5g3i4a" path="res://Objects/Icons.png" id="6_c17cc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vsc55"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_61rmi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1155.0
+offset_bottom = 644.0
+texture = ExtResource("2_gcgo6")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.5
+offset_top = -370.0
+offset_right = 407.5
+offset_bottom = 426.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mbh7d")
+
+[node name="Hint1" parent="." instance=ExtResource("4_me86y")]
+unique_name_in_owner = true
+offset_left = 1261.0
+offset_top = 310.0
+offset_right = 1744.0
+offset_bottom = 679.0
+text = "text"
+script = ExtResource("5_ivrhc")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(965, 546)
+
+[node name="Black Screen" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.858824)
+visibility_layer = 2
+offset_left = 711.0
+offset_top = 258.0
+offset_right = 1223.0
+offset_bottom = 617.0
+texture = SubResource("CanvasTexture_vsc55")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ErrorMessage4" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 862.0
+offset_top = 317.0
+offset_right = 1069.0
+offset_bottom = 421.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage5" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 1035.0
+offset_top = 441.0
+offset_right = 1242.0
+offset_bottom = 545.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage6" type="TextureRect" parent="Node"]
+visible = false
+visibility_layer = 2
+texture_filter = 1
+offset_left = 749.0
+offset_top = 370.0
+offset_right = 956.0
+offset_bottom = 474.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage7" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 1033.0
+offset_top = 330.0
+offset_right = 1240.0
+offset_bottom = 434.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage8" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 855.0
+offset_top = 492.0
+offset_right = 1062.0
+offset_bottom = 596.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage2" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 1017.0
+offset_top = 525.0
+offset_right = 1224.0
+offset_bottom = 629.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage3" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 746.0
+offset_top = 463.0
+offset_right = 953.0
+offset_bottom = 567.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="ErrorMessage1" type="TextureRect" parent="Node"]
+visible = false
+texture_filter = 1
+offset_left = 899.0
+offset_top = 409.0
+offset_right = 1106.0
+offset_bottom = 513.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c17cc")
+
+[node name="Button" type="Button" parent="Node/ErrorMessage1"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 74.0
+offset_top = 79.0
+offset_right = 133.0
+offset_bottom = 89.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Node/ErrorMessage1/Button" to="." method="_on_button_pressed"]

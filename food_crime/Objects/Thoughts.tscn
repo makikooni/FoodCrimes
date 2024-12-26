@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bb6astalm73q5"]
 
-[ext_resource type="FontFile" uid="uid://dcm3kjo8msrta" path="res://ZillaSlabHighlight-Regular.ttf" id="1_dxmg6"]
+[ext_resource type="FontFile" uid="uid://dcm3kjo8msrta" path="res://Assets/ZillaSlabHighlight-Regular.ttf" id="1_dxmg6"]
 
 [node name="Label" type="Label"]
 visible = false
