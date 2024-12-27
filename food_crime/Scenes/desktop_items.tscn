@@ -1,0 +1,294 @@
+[gd_scene load_steps=13 format=3 uid="uid://bddbbaqt3vm3u"]
+
+[ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
+[ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
+[ext_resource type="Texture2D" uid="uid://csp3u7rc3pp1" path="res://Assets/Desktop/notepad.png" id="3_iqwta"]
+[ext_resource type="Texture2D" uid="uid://cum2o62vwlkjt" path="res://Assets/Desktop/media.png" id="4_5yck3"]
+[ext_resource type="Texture2D" uid="uid://bvx33scvyr4w1" path="res://Assets/Desktop/database.png" id="5_veeag"]
+[ext_resource type="Texture2D" uid="uid://vm1q7n7r6b05" path="res://Assets/Desktop/audio.png" id="6_aij45"]
+[ext_resource type="Texture2D" uid="uid://7k1osxt7fbja" path="res://Assets/Desktop/battery.png" id="7_ivah7"]
+[ext_resource type="Texture2D" uid="uid://disx5powuvkas" path="res://Assets/Desktop/volume.png" id="8_43nuv"]
+[ext_resource type="Texture2D" uid="uid://bfqov65gr5abn" path="res://Assets/Desktop/calendar.png" id="9_vj6f3"]
+[ext_resource type="Texture2D" uid="uid://de6htdf4w6jsj" path="res://Assets/Emails/emaillayout.png" id="10_mrnr3"]
+[ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="11_5mgsm"]
+[ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
+
+[node name="DesktopItems" type="Node"]
+script = ExtResource("1_yno3v")
+
+[node name="Files" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 788.0
+offset_top = 350.0
+offset_right = 827.0
+offset_bottom = 382.0
+texture = ExtResource("2_cea2m")
+expand_mode = 1
+
+[node name="FilesButton" type="Button" parent="Files"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 17.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[node name="Notepad" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 794.0
+offset_top = 393.0
+offset_right = 830.0
+offset_bottom = 427.0
+texture = ExtResource("3_iqwta")
+expand_mode = 1
+
+[node name="NotepadButton" type="Button" parent="Notepad"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[node name="Media" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 745.0
+offset_top = 393.0
+offset_right = 782.0
+offset_bottom = 430.0
+texture = ExtResource("4_5yck3")
+expand_mode = 1
+
+[node name="MediaButton" type="Button" parent="Media"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 15.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[node name="Database" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 744.0
+offset_top = 345.0
+offset_right = 782.0
+offset_bottom = 383.0
+texture = ExtResource("5_veeag")
+expand_mode = 1
+
+[node name="DatabaseButton" type="Button" parent="Database"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 18.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[node name="Audio" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 742.0
+offset_top = 303.0
+offset_right = 783.0
+offset_bottom = 333.0
+texture = ExtResource("6_aij45")
+expand_mode = 1
+
+[node name="AudioButton" type="Button" parent="Audio"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 15.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[node name="Options" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1166.0
+offset_top = 560.0
+offset_right = 1186.0
+offset_bottom = 589.0
+texture = ExtResource("7_ivah7")
+expand_mode = 1
+
+[node name="Options2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1141.0
+offset_top = 560.0
+offset_right = 1161.0
+offset_bottom = 589.0
+texture = ExtResource("8_43nuv")
+expand_mode = 1
+
+[node name="Calendar" type="TextureRect" parent="."]
+visibility_layer = 2
+texture_filter = 1
+offset_left = 1113.0
+offset_top = 560.0
+offset_right = 1138.0
+offset_bottom = 589.0
+texture = ExtResource("9_vj6f3")
+expand_mode = 1
+
+[node name="CalendarButton" type="Button" parent="Calendar"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+visibility_layer = 2
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 29.0
+
+[node name="Email" type="Node" parent="."]
+
+[node name="emaillayout" type="TextureRect" parent="Email"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+offset_left = 852.0
+offset_top = 330.0
+offset_right = 1078.0
+offset_bottom = 507.0
+texture = ExtResource("10_mrnr3")
+expand_mode = 1
+
+[node name="emailexitbutton2" type="Button" parent="Email/emaillayout"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 213.0
+offset_top = 5.0
+offset_right = 221.0
+offset_bottom = 13.0
+
+[node name="emailexitbutton" type="Button" parent="Email/emaillayout"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 95.0
+offset_top = 151.0
+offset_right = 139.0
+offset_bottom = 162.0
+
+[node name="emailAdress" type="Label" parent="Email/emaillayout"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 46.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("11_5mgsm")
+theme_override_font_sizes/font_size = 8
+text = "Address here"
+
+[node name="emailText" type="Label" parent="Email/emaillayout"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = 13.0
+offset_top = 66.0
+offset_right = 210.0
+offset_bottom = 132.0
+theme_override_fonts/font = ExtResource("11_5mgsm")
+theme_override_font_sizes/font_size = 8
+text = "Text here "
+autowrap_mode = 3
+
+[node name="Email1" type="TextureRect" parent="Email/emaillayout"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 65.0
+offset_right = 34.0
+offset_bottom = 88.0
+texture = ExtResource("12_phrsv")
+expand_mode = 3
+
+[node name="Email1Button" type="Button" parent="Email/emaillayout/Email1"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Email" type="TextureRect" parent="Email"]
+texture_filter = 1
+offset_left = 792.0
+offset_top = 298.0
+offset_right = 826.0
+offset_bottom = 333.0
+texture = ExtResource("12_phrsv")
+expand_mode = 1
+
+[node name="EmailButton" type="Button" parent="Email/Email"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_type_variation = &"FlatButton"
+
+[connection signal="pressed" from="Files/FilesButton" to="." method="_on_files_button_pressed"]
+[connection signal="pressed" from="Notepad/NotepadButton" to="." method="_on_notepad_button_pressed"]
+[connection signal="pressed" from="Media/MediaButton" to="." method="_on_media_button_pressed"]
+[connection signal="pressed" from="Database/DatabaseButton" to="." method="_on_database_button_pressed"]
+[connection signal="pressed" from="Audio/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="Calendar/CalendarButton" to="." method="_on_calendar_button_pressed"]
+[connection signal="pressed" from="Email/emaillayout/emailexitbutton2" to="." method="_on_emailexitbutton_pressed"]
+[connection signal="pressed" from="Email/emaillayout/emailexitbutton" to="." method="_on_emailexitbutton_pressed"]
+[connection signal="pressed" from="Email/emaillayout/Email1/Email1Button" to="." method="_on_email_1_button_pressed"]
+[connection signal="pressed" from="Email/Email/EmailButton" to="." method="_on_email_button_pressed"]

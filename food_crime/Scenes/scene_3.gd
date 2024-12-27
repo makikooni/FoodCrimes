@@ -2,7 +2,6 @@
 
 extends Node
 @onready var camera_2d: Camera2D = %Camera2D
-@onready var black_screen: TextureRect = %"Black Screen"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
