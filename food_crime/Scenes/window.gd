@@ -3,6 +3,7 @@ extends Node
 @onready var button: Button = %Button
 @onready var basic_window: TextureRect = %basicWindow
 @onready var files_001_button: Button = $basicWindow/TextureRect/Files001button
+@onready var text_edit: TextEdit = %TextEdit
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,9 +19,12 @@ func _process(delta: float) -> void:
 func _on_basic_window_button_pressed() -> void:
 	print("Files closed")
 	basic_window.visible = false
+	text_edit.visible = false
 	
 
 
 func _on_files_001_button_pressed() -> void:
 	print("Files001 clicked")
-	pass #Ask for password
+	text_edit.visible = true
+	#input passpord settings
+	#add option to close

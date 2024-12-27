@@ -42,5 +42,24 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 30.0
 
+[node name="TextEdit" type="TextEdit" parent="basicWindow"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.576
+anchor_bottom = 0.268
+offset_left = 93.0
+offset_top = 91.0
+offset_right = 18.728
+offset_bottom = 73.008
+theme_override_font_sizes/font_size = 15
+placeholder_text = "000000"
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+autowrap_mode = 2
+scroll_fit_content_height = true
+
 [connection signal="pressed" from="basicWindow/basicWindowButton" to="." method="_on_basic_window_button_pressed"]
 [connection signal="pressed" from="basicWindow/TextureRect/Files001button" to="." method="_on_files_001_button_pressed"]
