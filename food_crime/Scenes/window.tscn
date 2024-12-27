@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c478sx1jyxqq7"]
+
+[ext_resource type="Script" path="res://Scenes/window.gd" id="1_mhmpv"]
+[ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="2_owuve"]
+[ext_resource type="Texture2D" uid="uid://ddnh3jqbtfxbq" path="res://Assets/Desktop/locked_files.png" id="3_chnpl"]
+
+[node name="Window" type="Node"]
+script = ExtResource("1_mhmpv")
+
+[node name="basicWindow" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+offset_left = 849.0
+offset_top = 334.0
+offset_right = 1096.0
+offset_bottom = 528.0
+texture = ExtResource("2_owuve")
+expand_mode = 1
+
+[node name="basicWindowButton" type="Button" parent="basicWindow"]
+unique_name_in_owner = true
+offset_left = 232.0
+offset_top = 5.0
+offset_right = 243.0
+offset_bottom = 15.0
+
+[node name="TextureRect" type="TextureRect" parent="basicWindow"]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 8.0
+offset_top = 31.0
+offset_right = 47.0
+offset_bottom = 61.0
+texture = ExtResource("3_chnpl")
+expand_mode = 1
+
+[node name="Files001button" type="Button" parent="basicWindow/TextureRect"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 30.0
+
+[connection signal="pressed" from="basicWindow/basicWindowButton" to="." method="_on_basic_window_button_pressed"]
+[connection signal="pressed" from="basicWindow/TextureRect/Files001button" to="." method="_on_files_001_button_pressed"]

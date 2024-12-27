@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=15 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://de6htdf4w6jsj" path="res://Assets/Emails/emaillayout.png" id="10_mrnr3"]
 [ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="11_5mgsm"]
 [ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
+[ext_resource type="PackedScene" uid="uid://c478sx1jyxqq7" path="res://Scenes/window.tscn" id="14_c0i4t"]
 
 [node name="DesktopItems" type="Node"]
 script = ExtResource("1_yno3v")
@@ -304,6 +305,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 theme_type_variation = &"FlatButton"
+
+[node name="Window" parent="." instance=ExtResource("14_c0i4t")]
 
 [connection signal="pressed" from="Files/FilesButton" to="." method="_on_files_button_pressed"]
 [connection signal="pressed" from="Notepad/NotepadButton" to="." method="_on_notepad_button_pressed"]
