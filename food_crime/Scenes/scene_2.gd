@@ -1,4 +1,4 @@
-#smoother scene transition needed, keeping camera zoom instead of implementing it again 
+#TO-DO: smoother scene transition needed, keeping camera zoom instead of implementing it again 
 
 extends Node
 @onready var camera_2d: Camera2D = %Camera2D
