@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=14 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7k1osxt7fbja" path="res://Assets/Desktop/battery.png" id="7_ivah7"]
 [ext_resource type="Texture2D" uid="uid://disx5powuvkas" path="res://Assets/Desktop/volume.png" id="8_43nuv"]
 [ext_resource type="Texture2D" uid="uid://bfqov65gr5abn" path="res://Assets/Desktop/calendar.png" id="9_vj6f3"]
+[ext_resource type="Texture2D" uid="uid://dkcbh2ipnfjxk" path="res://Assets/Desktop/calendar_open.png" id="10_7rrou"]
 [ext_resource type="Texture2D" uid="uid://de6htdf4w6jsj" path="res://Assets/Emails/emaillayout.png" id="10_mrnr3"]
 [ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="11_5mgsm"]
 [ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
@@ -177,6 +178,26 @@ layout_mode = 0
 offset_right = 26.0
 offset_bottom = 29.0
 
+[node name="OpenCalendar" type="TextureRect" parent="Calendar"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -41.0
+offset_top = -157.0
+offset_right = 72.0
+offset_bottom = -24.0
+texture = ExtResource("10_7rrou")
+expand_mode = 1
+
+[node name="CloseCalendarButton" type="Button" parent="Calendar/OpenCalendar"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 103.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 10.0
+
 [node name="Email" type="Node" parent="."]
 
 [node name="emaillayout" type="TextureRect" parent="Email"]
@@ -213,6 +234,7 @@ offset_bottom = 162.0
 unique_name_in_owner = true
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 6.0
 offset_top = 8.0
 offset_right = 184.0
@@ -227,6 +249,7 @@ unique_name_in_owner = true
 visible = false
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
+layout_mode = 0
 offset_left = 13.0
 offset_top = 66.0
 offset_right = 210.0
@@ -260,7 +283,7 @@ flat = true
 [node name="Email" type="TextureRect" parent="Email"]
 texture_filter = 1
 offset_left = 792.0
-offset_top = 298.0
+offset_top = 305.0
 offset_right = 826.0
 offset_bottom = 333.0
 texture = ExtResource("12_phrsv")
@@ -288,6 +311,7 @@ theme_type_variation = &"FlatButton"
 [connection signal="pressed" from="Database/DatabaseButton" to="." method="_on_database_button_pressed"]
 [connection signal="pressed" from="Audio/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Calendar/CalendarButton" to="." method="_on_calendar_button_pressed"]
+[connection signal="pressed" from="Calendar/OpenCalendar/CloseCalendarButton" to="." method="_on_close_calendar_button_pressed"]
 [connection signal="pressed" from="Email/emaillayout/emailexitbutton2" to="." method="_on_emailexitbutton_pressed"]
 [connection signal="pressed" from="Email/emaillayout/emailexitbutton" to="." method="_on_emailexitbutton_pressed"]
 [connection signal="pressed" from="Email/emaillayout/Email1/Email1Button" to="." method="_on_email_1_button_pressed"]
