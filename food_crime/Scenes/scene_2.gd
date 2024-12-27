@@ -24,6 +24,7 @@ extends Node
 	$messages/Label7,
 	$messages/Label8
 ]
+@onready var timer_2: Timer = $Timer2
 
 var press_count = 0
 
@@ -31,11 +32,18 @@ func run_errors():
 	if press_count < error_messages.size():
 		error_messages[press_count].visible = true
 		messages[press_count].visible = true
+		print("error and message shown")
 	else:
+		print("button disconnected")
+		timer_2.wait_time = 2.0
+		timer_2.start()
 		if button:
 			button.disconnect("pressed", _on_button_pressed)  # Correctly disconnect signal
 			button.queue_free()  # Destroy the button
 			button = null  
+			
+			
+			
 		
 
 func _ready() -> void:
@@ -54,3 +62,7 @@ func _on_timer_timeout() -> void:
 	error_message_1.visible = true
 	
 	
+
+func _on_timer_2_timeout() -> void:
+	print("Changing to scene 3")
+	get_tree().change_scene_to_file("res://Scenes/scene3.tscn")

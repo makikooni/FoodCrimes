@@ -147,6 +147,7 @@ texture = ExtResource("6_c17cc")
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 74.0
 offset_top = 79.0
 offset_right = 133.0
@@ -231,5 +232,9 @@ theme_override_fonts/font = ExtResource("7_nsjgb")
 theme_override_font_sizes/font_size = 60
 text = "Shit"
 
+[node name="Timer2" type="Timer" parent="."]
+unique_name_in_owner = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Node/ErrorMessage1/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
