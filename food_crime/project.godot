@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Food_Crime"
-run/main_scene="res://Scenes/scene3.tscn"
+run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Assets/icon.svg"
 
@@ -19,7 +19,10 @@ config/icon="res://Assets/icon.svg"
 
 window/size/viewport_width=1928
 window/size/viewport_height=1087
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

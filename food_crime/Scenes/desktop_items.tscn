@@ -242,7 +242,7 @@ offset_right = 184.0
 offset_bottom = 46.0
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("11_5mgsm")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 10
 text = "Address here"
 
 [node name="emailText" type="Label" parent="Email/emaillayout"]

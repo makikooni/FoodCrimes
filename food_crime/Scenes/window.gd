@@ -3,8 +3,10 @@ extends Node
 @onready var button: Button = %Button
 @onready var basic_window: TextureRect = %basicWindow
 @onready var files_001_button: Button = $basicWindow/TextureRect/Files001button
-@onready var text_edit: TextEdit = %TextEdit
-
+@onready var submit_button: Button = $basicWindow/TextEdit/Button
+@onready var pass_window: TextureRect = $pass_window
+@onready var line_edit: LineEdit = %LineEdit
+var save_password = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,12 +21,17 @@ func _process(delta: float) -> void:
 func _on_basic_window_button_pressed() -> void:
 	print("Files closed")
 	basic_window.visible = false
-	text_edit.visible = false
+	pass_window.visible = false
 	
 
 
 func _on_files_001_button_pressed() -> void:
 	print("Files001 clicked")
-	text_edit.visible = true
-	#input passpord settings
-	#add option to close
+	if save_password != true:
+		pass_window.visible = true
+	
+func _on_button_pressed() -> void:
+	if line_edit.text == "030291":
+		print("correct")
+		save_password = true
+		pass_window.visible = false
