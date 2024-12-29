@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpgbgariuqk2m"]
+[gd_scene load_steps=9 format=3 uid="uid://cpgbgariuqk2m"]
 
 [ext_resource type="Texture2D" uid="uid://dnnxyu50pcgih" path="res://Assets/Desktop/damaged_image.png" id="1_1gamj"]
 [ext_resource type="Script" path="res://Scenes/folder_1_icons.gd" id="1_qrred"]
 [ext_resource type="Texture2D" uid="uid://vm1q7n7r6b05" path="res://Assets/Desktop/audio.png" id="2_jgnpt"]
 [ext_resource type="Texture2D" uid="uid://bvx33scvyr4w1" path="res://Assets/Desktop/database.png" id="3_4bjah"]
 [ext_resource type="Texture2D" uid="uid://cum2o62vwlkjt" path="res://Assets/Desktop/media.png" id="4_c7jv3"]
+[ext_resource type="Texture2D" uid="uid://jf0a3i88lj3h" path="res://Assets/System/error_empty.png" id="6_u5mot"]
+
+[sub_resource type="Gradient" id="Gradient_fuo02"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c3fma"]
+gradient = SubResource("Gradient_fuo02")
 
 [node name="Folder_1_icons" type="TextureRect"]
 visible = false
@@ -182,4 +188,73 @@ offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="error_image" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 232.0
+offset_bottom = 114.0
+texture = ExtResource("6_u5mot")
+
+[node name="cancel_button" type="Button" parent="error_image"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 189.0
+offset_top = 4.0
+offset_right = 203.0
+offset_bottom = 18.0
+
+[node name="ok_button" type="Button" parent="error_image"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = 23.0
+offset_right = 33.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="picture_window" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 0.521569, 1, 1)
+layout_mode = 0
+offset_left = -37.0
+offset_top = -34.0
+offset_right = 288.0
+offset_bottom = 161.0
+texture = SubResource("GradientTexture2D_c3fma")
+
+[node name="picture_001" type="TextureRect" parent="picture_window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 17.0
+offset_right = -21.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="picture_exit_button" type="Button" parent="picture_window"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 308.0
+offset_right = 325.0
+offset_bottom = 13.0
+
 [connection signal="pressed" from="Node2D/image_icon_3/image_icon_3" to="." method="_on_image_icon_3_pressed"]
+[connection signal="pressed" from="error_image/cancel_button" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="error_image/ok_button" to="." method="_on_ok_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_exit_button" to="." method="_on_picture_exit_button_pressed"]
