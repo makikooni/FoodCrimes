@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c478sx1jyxqq7"]
+[gd_scene load_steps=5 format=3 uid="uid://c478sx1jyxqq7"]
 
 [ext_resource type="Script" path="res://Scenes/window.gd" id="1_mhmpv"]
 [ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="2_owuve"]
 [ext_resource type="Texture2D" uid="uid://ddnh3jqbtfxbq" path="res://Assets/Desktop/locked_files.png" id="3_chnpl"]
+[ext_resource type="PackedScene" uid="uid://cpgbgariuqk2m" path="res://Scenes/folder_1_icons.tscn" id="4_r85rc"]
 
 [node name="Window" type="Node"]
 script = ExtResource("1_mhmpv")
 
 [node name="basicWindow" type="TextureRect" parent="."]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 offset_left = 849.0
 offset_top = 334.0
@@ -20,6 +20,7 @@ expand_mode = 1
 
 [node name="basicWindowButton" type="Button" parent="basicWindow"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 232.0
 offset_top = 5.0
 offset_right = 243.0
@@ -28,6 +29,7 @@ offset_bottom = 15.0
 [node name="TextureRect" type="TextureRect" parent="basicWindow"]
 unique_name_in_owner = true
 texture_filter = 1
+layout_mode = 0
 offset_left = 8.0
 offset_top = 31.0
 offset_right = 47.0
@@ -41,6 +43,11 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 30.0
+
+[node name="Folder_1_icons" parent="." instance=ExtResource("4_r85rc")]
+unique_name_in_owner = true
+offset_top = 367.0
+offset_bottom = 446.0
 
 [node name="pass_window" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -62,6 +69,7 @@ expand_mode = 1
 
 [node name="LineEdit" type="LineEdit" parent="pass_window"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 19.0
 offset_top = 15.0
 offset_right = 86.0625

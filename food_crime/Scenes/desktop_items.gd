@@ -55,7 +55,8 @@ func _on_audio_button_pressed() -> void:
 func _on_files_button_pressed() -> void:
 	print("Files clicked")
 	window.basic_window.visible = true
-	
+
+
 #Email funtions:
 func _on_email_button_pressed() -> void:
 	print("Email clicked")
