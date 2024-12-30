@@ -157,7 +157,7 @@ offset_bottom = 162.0
 [node name="emailAdress" type="Label" parent="Email/emaillayout"]
 unique_name_in_owner = true
 visible = false
-texture_filter = 1
+texture_filter = 5
 layout_mode = 0
 offset_left = 6.0
 offset_top = 8.0
@@ -172,16 +172,17 @@ text = "Address here"
 unique_name_in_owner = true
 visible = false
 modulate = Color(0, 0, 0, 1)
-texture_filter = 1
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 5
 layout_mode = 0
 offset_left = 13.0
 offset_top = 66.0
-offset_right = 210.0
-offset_bottom = 132.0
-theme_override_fonts/font = ExtResource("11_5mgsm")
+offset_right = 215.0
+offset_bottom = 137.0
 theme_override_font_sizes/font_size = 8
 text = "Text here "
 autowrap_mode = 3
+visible_characters_behavior = 1
 
 [node name="Email1" type="TextureRect" parent="Email/emaillayout"]
 unique_name_in_owner = true

@@ -93,26 +93,32 @@ func _on_audio_icon_2_pressed() -> void:
 
 func _on_giftbox_button_pressed() -> void:
 	#TOO LONG DO STH ABOUT IT
+	giftbox_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A thoughtful gesture... or perhaps a subtle attempt to create a connection? The note and the gift raise questions about their relationship. Time to speak with the neighbor and see what they know about the dynamics between them")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
 func _on_syringe_button_pressed() -> void:
+	syringe_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A medical syringe—part of his treatment, or something more sinister? Could the nurse be involved?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
 func _on_family_picture_button_pressed() -> void:
+	family_picture_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A memory captured two years ago. The man beside her… who was he?")
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
 func _on_knife_button_pressed() -> void:
+	knife_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A knife out in the open, taken out to clean… Or taken out for another reason?")
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
 func _on_book_button_pressed() -> void:
+	book_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A book on plants and teas… Could this be just a personal interest, or perhaps something more, related to a family business or his daily routine?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
 func _on_couch_button_pressed() -> void:
+	couch_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("The spot where it all ended. But how did it happen?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
@@ -120,23 +126,27 @@ func _on_couch_button_pressed() -> void:
 
 func _on_tea_leaves_button_pressed() -> void:
 	hint_1.show_hint("Tea leaves...")
+	tea_leaves_button.modulate = Color(1, 1, 1, 1)	
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
 
 
 func _on_teashelf_button_pressed() -> void:
+	teashelf_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("An impressive collection, including some exotic and rare varieties.")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
 
 
 func _on_teacup_button_pressed() -> void:
+	teacup_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("The tea is still warm… Did he drink it shortly before his death?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
 
 
 func _on_chicken_button_pressed() -> void:
+	chicken_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?”")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
