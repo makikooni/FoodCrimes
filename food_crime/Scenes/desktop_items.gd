@@ -5,9 +5,6 @@ extends Node
 @onready var buttons = {
 	"files": %FilesButton,
 	"notepad": %NotepadButton,
-	"email": %EmailButton,
-	"media": %MediaButton,
-	"database": $Database/DatabaseButton,
 	"calendar": %CalendarButton
 }
 
@@ -41,14 +38,6 @@ func _process(delta: float) -> void:
 func _on_notepad_button_pressed() -> void:
 	print("Notepad clicked")	
 
-func _on_media_button_pressed() -> void:
-	print("Media clicked")
-
-func _on_database_button_pressed() -> void:
-	print("Database clicked")
-
-func _on_audio_button_pressed() -> void:
-	print("Audio clicked")
 
 #Files functions:
 func _on_files_button_pressed() -> void:

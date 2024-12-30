@@ -1,11 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=12 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
 [ext_resource type="Texture2D" uid="uid://csp3u7rc3pp1" path="res://Assets/Desktop/notepad.png" id="3_iqwta"]
-[ext_resource type="Texture2D" uid="uid://cum2o62vwlkjt" path="res://Assets/Desktop/media.png" id="4_5yck3"]
-[ext_resource type="Texture2D" uid="uid://bvx33scvyr4w1" path="res://Assets/Desktop/database.png" id="5_veeag"]
-[ext_resource type="Texture2D" uid="uid://vm1q7n7r6b05" path="res://Assets/Desktop/audio.png" id="6_aij45"]
 [ext_resource type="Texture2D" uid="uid://7k1osxt7fbja" path="res://Assets/Desktop/battery.png" id="7_ivah7"]
 [ext_resource type="Texture2D" uid="uid://disx5powuvkas" path="res://Assets/Desktop/volume.png" id="8_43nuv"]
 [ext_resource type="Texture2D" uid="uid://bfqov65gr5abn" path="res://Assets/Desktop/calendar.png" id="9_vj6f3"]
@@ -20,9 +17,9 @@ script = ExtResource("1_yno3v")
 
 [node name="Files" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 788.0
+offset_left = 741.0
 offset_top = 350.0
-offset_right = 827.0
+offset_right = 780.0
 offset_bottom = 382.0
 texture = ExtResource("2_cea2m")
 expand_mode = 1
@@ -45,9 +42,9 @@ theme_type_variation = &"FlatButton"
 
 [node name="Notepad" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 794.0
+offset_left = 747.0
 offset_top = 393.0
-offset_right = 830.0
+offset_right = 783.0
 offset_bottom = 427.0
 texture = ExtResource("3_iqwta")
 expand_mode = 1
@@ -63,80 +60,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 8.0
 offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.7, 0.7)
-theme_type_variation = &"FlatButton"
-
-[node name="Media" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 745.0
-offset_top = 393.0
-offset_right = 782.0
-offset_bottom = 430.0
-texture = ExtResource("4_5yck3")
-expand_mode = 1
-
-[node name="MediaButton" type="Button" parent="Media"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 15.0
-offset_bottom = 12.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.7, 0.7)
-theme_type_variation = &"FlatButton"
-
-[node name="Database" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 744.0
-offset_top = 345.0
-offset_right = 782.0
-offset_bottom = 383.0
-texture = ExtResource("5_veeag")
-expand_mode = 1
-
-[node name="DatabaseButton" type="Button" parent="Database"]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 18.0
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.7, 0.7)
-theme_type_variation = &"FlatButton"
-
-[node name="Audio" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 742.0
-offset_top = 303.0
-offset_right = 783.0
-offset_bottom = 333.0
-texture = ExtResource("6_aij45")
-expand_mode = 1
-
-[node name="AudioButton" type="Button" parent="Audio"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(1, 1, 1, 0)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 15.0
-offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
@@ -283,9 +206,9 @@ flat = true
 
 [node name="Email" type="TextureRect" parent="Email"]
 texture_filter = 1
-offset_left = 792.0
+offset_left = 744.0
 offset_top = 305.0
-offset_right = 826.0
+offset_right = 778.0
 offset_bottom = 333.0
 texture = ExtResource("12_phrsv")
 expand_mode = 1
@@ -310,9 +233,6 @@ theme_type_variation = &"FlatButton"
 
 [connection signal="pressed" from="Files/FilesButton" to="." method="_on_files_button_pressed"]
 [connection signal="pressed" from="Notepad/NotepadButton" to="." method="_on_notepad_button_pressed"]
-[connection signal="pressed" from="Media/MediaButton" to="." method="_on_media_button_pressed"]
-[connection signal="pressed" from="Database/DatabaseButton" to="." method="_on_database_button_pressed"]
-[connection signal="pressed" from="Audio/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Calendar/CalendarButton" to="." method="_on_calendar_button_pressed"]
 [connection signal="pressed" from="Calendar/OpenCalendar/CloseCalendarButton" to="." method="_on_close_calendar_button_pressed"]
 [connection signal="pressed" from="Email/emaillayout/emailexitbutton2" to="." method="_on_emailexitbutton_pressed"]

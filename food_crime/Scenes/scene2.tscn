@@ -72,6 +72,20 @@ offset_bottom = 421.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
 
+[node name="Button8" type="Button" parent="Node/ErrorMessage4"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.1429
+offset_top = 67.1429
+offset_right = -65.8571
+offset_bottom = -3.85712
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ErrorMessage5" type="TextureRect" parent="Node"]
 visible = false
 texture_filter = 1
@@ -81,6 +95,20 @@ offset_right = 1242.0
 offset_bottom = 545.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
+
+[node name="Button7" type="Button" parent="Node/ErrorMessage5"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.7143
+offset_top = 65.7143
+offset_right = -67.2857
+offset_bottom = -5.28572
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ErrorMessage6" type="TextureRect" parent="Node"]
 visible = false
@@ -93,6 +121,20 @@ offset_bottom = 474.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
 
+[node name="Button6" type="Button" parent="Node/ErrorMessage6"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 69.0
+offset_top = 66.0
+offset_right = -64.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ErrorMessage7" type="TextureRect" parent="Node"]
 visible = false
 texture_filter = 1
@@ -102,6 +144,21 @@ offset_right = 1240.0
 offset_bottom = 434.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
+
+[node name="Button5" type="Button" parent="Node/ErrorMessage7"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = 73.0
+offset_right = -68.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ErrorMessage8" type="TextureRect" parent="Node"]
 visible = false
@@ -113,6 +170,20 @@ offset_bottom = 596.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
 
+[node name="Button4" type="Button" parent="Node/ErrorMessage8"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.4286
+offset_top = 68.5714
+offset_right = -65.5714
+offset_bottom = -8.42859
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ErrorMessage2" type="TextureRect" parent="Node"]
 visible = false
 texture_filter = 1
@@ -123,6 +194,20 @@ offset_bottom = 629.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
 
+[node name="Button3" type="Button" parent="Node/ErrorMessage2"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.8571
+offset_top = 68.5714
+offset_right = -64.1429
+offset_bottom = -8.42857
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ErrorMessage3" type="TextureRect" parent="Node"]
 visible = false
 texture_filter = 1
@@ -132,6 +217,21 @@ offset_right = 953.0
 offset_bottom = 567.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_c17cc")
+
+[node name="Button2" type="Button" parent="Node/ErrorMessage3"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 70.0
+offset_right = -61.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ErrorMessage1" type="TextureRect" parent="Node"]
 visible = false
@@ -147,11 +247,18 @@ texture = ExtResource("6_c17cc")
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 74.0
-offset_top = 79.0
-offset_right = 133.0
-offset_bottom = 89.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.319
+anchor_top = 0.704
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.033
+offset_top = -0.216003
+offset_right = -66.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="messages" type="Node" parent="."]
 
@@ -236,5 +343,12 @@ text = "Shit"
 unique_name_in_owner = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Node/ErrorMessage4/Button8" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage5/Button7" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage6/Button6" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage7/Button5" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage8/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage2/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node/ErrorMessage3/Button2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node/ErrorMessage1/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

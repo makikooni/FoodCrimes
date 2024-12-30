@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpgbgariuqk2m"]
+[gd_scene load_steps=13 format=3 uid="uid://cpgbgariuqk2m"]
 
 [ext_resource type="Texture2D" uid="uid://dnnxyu50pcgih" path="res://Assets/Desktop/damaged_image.png" id="1_1gamj"]
 [ext_resource type="Script" path="res://Scenes/folder_1_icons.gd" id="1_qrred"]
 [ext_resource type="Texture2D" uid="uid://vm1q7n7r6b05" path="res://Assets/Desktop/audio.png" id="2_jgnpt"]
 [ext_resource type="Texture2D" uid="uid://bvx33scvyr4w1" path="res://Assets/Desktop/database.png" id="3_4bjah"]
+[ext_resource type="AudioStream" uid="uid://cjh6yfl883vb8" path="res://Assets/Audio/Nurse1.mp3" id="4_ainsu"]
 [ext_resource type="Texture2D" uid="uid://cum2o62vwlkjt" path="res://Assets/Desktop/media.png" id="4_c7jv3"]
+[ext_resource type="AudioStream" uid="uid://bwyymxq1kd502" path="res://Assets/Audio/Daughter1.mp3" id="4_ts3ak"]
 [ext_resource type="Texture2D" uid="uid://jf0a3i88lj3h" path="res://Assets/System/error_empty.png" id="6_u5mot"]
 [ext_resource type="PackedScene" uid="uid://bb6astalm73q5" path="res://Objects/Thoughts.tscn" id="7_0l1x7"]
 [ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="7_mka0n"]
@@ -106,6 +108,7 @@ texture = ExtResource("2_jgnpt")
 expand_mode = 1
 
 [node name="audio_icon_2" type="Button" parent="Node2D/audio_icon_2"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -120,6 +123,10 @@ offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="nurse_dialogue" type="AudioStreamPlayer2D" parent="Node2D/audio_icon_2/audio_icon_2"]
+unique_name_in_owner = true
+stream = ExtResource("4_ainsu")
+
 [node name="audio_icon_1" type="TextureRect" parent="Node2D"]
 offset_left = 136.0
 offset_top = 2.0
@@ -129,6 +136,7 @@ texture = ExtResource("2_jgnpt")
 expand_mode = 1
 
 [node name="audio_icon_1" type="Button" parent="Node2D/audio_icon_1"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -142,6 +150,10 @@ offset_right = 21.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/audio_icon_1/audio_icon_1"]
+unique_name_in_owner = true
+stream = ExtResource("4_ts3ak")
 
 [node name="database_icon_1" type="TextureRect" parent="Node2D"]
 offset_left = 61.0
@@ -238,11 +250,13 @@ theme_override_font_sizes/font_size = 11
 [node name="Hint1" parent="." instance=ExtResource("7_0l1x7")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 399.0
-offset_top = -58.0
-offset_right = 587.0
-offset_bottom = 75.0
+offset_left = 386.0
+offset_top = -96.0
+offset_right = 524.0
+offset_bottom = 243.0
 theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+visible_characters_behavior = 1
 script = ExtResource("8_b7jis")
 
 [node name="picture_window" type="TextureRect" parent="."]
@@ -278,6 +292,8 @@ offset_right = 293.0
 offset_bottom = 158.0
 
 [node name="tea_leaves_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 221.0
 offset_top = 55.0
@@ -285,6 +301,8 @@ offset_right = 245.0
 offset_bottom = 70.0
 
 [node name="teashelf_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 193.0
 offset_top = 16.0
@@ -292,6 +310,8 @@ offset_right = 256.0
 offset_bottom = 31.0
 
 [node name="teacup_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 171.0
 offset_top = 70.0
@@ -299,6 +319,8 @@ offset_right = 191.0
 offset_bottom = 83.0
 
 [node name="chicken_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 53.0
 offset_top = 118.0
@@ -313,6 +335,8 @@ offset_right = 292.0
 offset_bottom = 157.0
 
 [node name="knife_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 249.0
 offset_top = 110.0
@@ -320,6 +344,8 @@ offset_right = 271.0
 offset_bottom = 118.0
 
 [node name="book_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 228.0
 offset_top = 119.0
@@ -327,6 +353,8 @@ offset_right = 256.0
 offset_bottom = 135.0
 
 [node name="couch_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 13.0
 offset_top = 76.0
@@ -341,6 +369,8 @@ offset_right = 293.0
 offset_bottom = 157.0
 
 [node name="giftbox_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 192.0
 offset_top = 58.0
@@ -348,6 +378,8 @@ offset_right = 210.0
 offset_bottom = 75.0
 
 [node name="syringe_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 50.0
 offset_top = 90.0
@@ -355,6 +387,8 @@ offset_right = 69.0
 offset_bottom = 98.0
 
 [node name="family_picture_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 7.0
 offset_top = 77.0
@@ -373,6 +407,18 @@ offset_bottom = 16.0
 [connection signal="pressed" from="Node2D/image_icon_3/image_icon_3" to="." method="_on_image_icon_3_pressed"]
 [connection signal="pressed" from="Node2D/image_icon_2/image_icon_2" to="." method="_on_image_icon_2_pressed"]
 [connection signal="pressed" from="Node2D/image_icon_1/image_icon_1" to="." method="_on_image_icon_1_pressed"]
+[connection signal="pressed" from="Node2D/audio_icon_2/audio_icon_2" to="." method="_on_audio_icon_2_pressed"]
+[connection signal="pressed" from="Node2D/audio_icon_1/audio_icon_1" to="." method="_on_audio_icon_1_pressed"]
 [connection signal="pressed" from="error_image/cancel_button" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="error_image/ok_button" to="." method="_on_ok_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image2Buttons/tea_leaves_button" to="." method="_on_tea_leaves_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image2Buttons/teashelf_button" to="." method="_on_teashelf_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image2Buttons/teacup_button" to="." method="_on_teacup_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image2Buttons/chicken_button" to="." method="_on_chicken_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image3Buttons/knife_button" to="." method="_on_knife_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image3Buttons/book_button" to="." method="_on_book_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image3Buttons/couch_button" to="." method="_on_couch_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image1Buttons/giftbox_button" to="." method="_on_giftbox_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image1Buttons/syringe_button" to="." method="_on_syringe_button_pressed"]
+[connection signal="pressed" from="picture_window/picture_001/Image1Buttons/family_picture_button" to="." method="_on_family_picture_button_pressed"]
 [connection signal="pressed" from="picture_window/picture_exit_button" to="." method="_on_picture_exit_button_pressed"]
