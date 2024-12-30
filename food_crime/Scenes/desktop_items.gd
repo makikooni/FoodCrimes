@@ -16,7 +16,6 @@ extends Node
 	"exit_button": %emailexitbutton2,
 	"address": %emailAdress,
 	"text": %emailText,
-	"hint": %Hint1,
 	"email_1": $Email/emaillayout/Email1,
 	"email_1_button": %Email1Button,
 	"main_email": $Email/Email

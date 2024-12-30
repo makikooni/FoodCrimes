@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpgbgariuqk2m"]
+[gd_scene load_steps=11 format=3 uid="uid://cpgbgariuqk2m"]
 
 [ext_resource type="Texture2D" uid="uid://dnnxyu50pcgih" path="res://Assets/Desktop/damaged_image.png" id="1_1gamj"]
 [ext_resource type="Script" path="res://Scenes/folder_1_icons.gd" id="1_qrred"]
@@ -6,11 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bvx33scvyr4w1" path="res://Assets/Desktop/database.png" id="3_4bjah"]
 [ext_resource type="Texture2D" uid="uid://cum2o62vwlkjt" path="res://Assets/Desktop/media.png" id="4_c7jv3"]
 [ext_resource type="Texture2D" uid="uid://jf0a3i88lj3h" path="res://Assets/System/error_empty.png" id="6_u5mot"]
-
-[sub_resource type="Gradient" id="Gradient_fuo02"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_c3fma"]
-gradient = SubResource("Gradient_fuo02")
+[ext_resource type="PackedScene" uid="uid://bb6astalm73q5" path="res://Objects/Thoughts.tscn" id="7_0l1x7"]
+[ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="7_mka0n"]
+[ext_resource type="Script" path="res://Objects/thoughts.gd" id="8_b7jis"]
+[ext_resource type="Texture2D" uid="uid://bvrajimltjiyl" path="res://Assets/Pictures/living.png" id="8_yuou6"]
 
 [node name="Folder_1_icons" type="TextureRect"]
 visible = false
@@ -62,6 +61,7 @@ texture = ExtResource("1_1gamj")
 expand_mode = 1
 
 [node name="image_icon_2" type="Button" parent="Node2D/image_icon_2"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -89,6 +89,7 @@ texture = ExtResource("1_1gamj")
 expand_mode = 1
 
 [node name="image_icon_1" type="Button" parent="Node2D/image_icon_1"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -1.0
@@ -224,37 +225,154 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="error_message" type="Label" parent="error_image"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 38.0
+offset_right = 192.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+
+[node name="Hint1" parent="." instance=ExtResource("7_0l1x7")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 399.0
+offset_top = -58.0
+offset_right = 587.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("8_b7jis")
+
 [node name="picture_window" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-modulate = Color(1, 0.521569, 1, 1)
 layout_mode = 0
 offset_left = -37.0
 offset_top = -34.0
 offset_right = 288.0
 offset_bottom = 161.0
-texture = SubResource("GradientTexture2D_c3fma")
+texture = ExtResource("7_mka0n")
+expand_mode = 1
 
 [node name="picture_001" type="TextureRect" parent="picture_window"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 26.0
-offset_top = 17.0
-offset_right = -21.0
-offset_bottom = -17.0
+offset_left = 17.0
+offset_top = 28.0
+offset_right = -16.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("8_yuou6")
+expand_mode = 1
+
+[node name="Image2Buttons" type="TextureRect" parent="picture_window/picture_001"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 293.0
+offset_bottom = 158.0
+
+[node name="tea_leaves_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 55.0
+offset_right = 245.0
+offset_bottom = 70.0
+
+[node name="teashelf_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 31.0
+
+[node name="teacup_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 70.0
+offset_right = 191.0
+offset_bottom = 83.0
+
+[node name="chicken_button" type="Button" parent="picture_window/picture_001/Image2Buttons"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 118.0
+offset_right = 101.0
+offset_bottom = 148.0
+
+[node name="Image3Buttons" type="TextureRect" parent="picture_window/picture_001"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 157.0
+
+[node name="knife_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 110.0
+offset_right = 271.0
+offset_bottom = 118.0
+
+[node name="book_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 119.0
+offset_right = 256.0
+offset_bottom = 135.0
+
+[node name="couch_button" type="Button" parent="picture_window/picture_001/Image3Buttons"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 76.0
+offset_right = 99.0
+offset_bottom = 157.0
+
+[node name="Image1Buttons" type="TextureRect" parent="picture_window/picture_001"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 293.0
+offset_bottom = 157.0
+
+[node name="giftbox_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 58.0
+offset_right = 210.0
+offset_bottom = 75.0
+
+[node name="syringe_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 90.0
+offset_right = 69.0
+offset_bottom = 98.0
+
+[node name="family_picture_button" type="Button" parent="picture_window/picture_001/Image1Buttons"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 77.0
+offset_right = 30.0
+offset_bottom = 99.0
 
 [node name="picture_exit_button" type="Button" parent="picture_window"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 308.0
-offset_right = 325.0
-offset_bottom = 13.0
+offset_left = 305.0
+offset_top = 3.0
+offset_right = 322.0
+offset_bottom = 16.0
 
 [connection signal="pressed" from="Node2D/image_icon_3/image_icon_3" to="." method="_on_image_icon_3_pressed"]
+[connection signal="pressed" from="Node2D/image_icon_2/image_icon_2" to="." method="_on_image_icon_2_pressed"]
+[connection signal="pressed" from="Node2D/image_icon_1/image_icon_1" to="." method="_on_image_icon_1_pressed"]
 [connection signal="pressed" from="error_image/cancel_button" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="error_image/ok_button" to="." method="_on_ok_button_pressed"]
 [connection signal="pressed" from="picture_window/picture_exit_button" to="." method="_on_picture_exit_button_pressed"]

@@ -1,9 +1,10 @@
 extends Node
 @onready var texture_rect: TextureRect = %TextureRect
-@onready var button: Button = %Button
 @onready var basic_window: TextureRect = %basicWindow
 @onready var files_001_button: Button = $basicWindow/TextureRect/Files001button
-@onready var submit_button: Button = $basicWindow/TextEdit/Button
+
+@onready var button: Button = $pass_window/LineEdit/Button
+
 @onready var pass_window: TextureRect = $pass_window
 @onready var line_edit: LineEdit = %LineEdit
 var save_password = false

@@ -10,6 +10,7 @@ script = ExtResource("1_mhmpv")
 
 [node name="basicWindow" type="TextureRect" parent="."]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 offset_left = 849.0
 offset_top = 334.0
@@ -38,6 +39,7 @@ texture = ExtResource("3_chnpl")
 expand_mode = 1
 
 [node name="Files001button" type="Button" parent="basicWindow/TextureRect"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -79,6 +81,7 @@ alignment = 1
 max_length = 6
 
 [node name="Button" type="Button" parent="pass_window/LineEdit"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

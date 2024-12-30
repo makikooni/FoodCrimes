@@ -1,6 +1,7 @@
 extends Label
 @onready var hint_1: Label = %Hint1
 
+
 func show_hint(text):
 	hint_1.text = text
 	print("show hint")
