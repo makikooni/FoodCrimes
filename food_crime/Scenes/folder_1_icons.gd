@@ -85,7 +85,7 @@ func _on_audio_icon_1_pressed() -> void:
 	#show some container for audio player with stop and play button
 	audio_stream_player_2d.play()	
 func _on_audio_icon_2_pressed() -> void:
-	print("audio_icon_1_pressed")
+	print("audio_icon_2_pressed")
 	#TO-DO: stop all other audio
 	#TO-DO: show some container for audio player with stop and play button
 	nurse_dialogue.play()
