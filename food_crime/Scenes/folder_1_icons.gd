@@ -16,9 +16,7 @@ var image_icon_pressed = 0
 @onready var image_3_buttons: TextureRect = %Image3Buttons
 @onready var image_1_buttons: TextureRect = %Image1Buttons
 @onready var hint_1: Label = %Hint1
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $Node2D/audio_icon_1/audio_icon_1/AudioStreamPlayer2D
 @onready var audio_icon_2: Button = %audio_icon_2
-@onready var nurse_dialogue: AudioStreamPlayer2D = $Node2D/audio_icon_2/audio_icon_2/nurse_dialogue
 @onready var giftbox_button: Button = %giftbox_button
 @onready var syringe_button: Button = %syringe_button
 @onready var family_picture_button: Button = %family_picture_button
@@ -29,6 +27,8 @@ var image_icon_pressed = 0
 @onready var teashelf_button: Button = %teashelf_button
 @onready var teacup_button: Button = %teacup_button
 @onready var chicken_button: Button = %chicken_button
+@onready var towel_button: Button = %towel_button
+@onready var music_player_node: Node = $music_player_node
 
 #IMAGES
 func _on_image_icon_2_pressed() -> void:
@@ -81,14 +81,18 @@ func _on_picture_exit_button_pressed() -> void:
 #AUDIO
 func _on_audio_icon_1_pressed() -> void:
 	print("audio_icon_1_pressed")
-	#TO-DO: stop all other audio
-	#show some container for audio player with stop and play button
-	audio_stream_player_2d.play()	
+	if music_player_node.music_player.visible == false:
+		music_player_node.music_player.visible = true
+		music_player_node.change_audio_names("Interview with Daughter","00:02:20")
+		music_player_node.play_audios("daughter")
+
 func _on_audio_icon_2_pressed() -> void:
-	print("audio_icon_2_pressed")
-	#TO-DO: stop all other audio
-	#TO-DO: show some container for audio player with stop and play button
-	nurse_dialogue.play()
+	if music_player_node.music_player.visible == false:
+		music_player_node.music_player.visible = true
+		music_player_node.change_audio_names("Interview with Nurse","00:02:20")
+		print("audio_icon_2_pressed")
+		music_player_node.play_audios("nurse")
+
 
 
 func _on_giftbox_button_pressed() -> void:
@@ -148,5 +152,12 @@ func _on_teacup_button_pressed() -> void:
 func _on_chicken_button_pressed() -> void:
 	chicken_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?”")
+	await get_tree().create_timer(5).timeout
+	hint_1.hide_hint()
+
+
+func _on_towel_button_pressed() -> void:
+	towel_button.modulate = Color(1, 1, 1, 1)	
+	hint_1.show_hint("Is that a raw chicken??? Oh no, wait. It's just a towel.")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
