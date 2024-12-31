@@ -11,6 +11,8 @@ var hint2_available = true
 @onready var picture_001: TextureRect = $picture_window/picture_001
 var image_icon_pressed = 0
 @onready var audio_icon_1: Button = %audio_icon_1
+@onready var database_icon_1: Button = %database_icon_1
+
 
 @onready var image_2_buttons: TextureRect = %Image2Buttons
 @onready var image_3_buttons: TextureRect = %Image3Buttons
@@ -29,6 +31,7 @@ var image_icon_pressed = 0
 @onready var chicken_button: Button = %chicken_button
 @onready var towel_button: Button = %towel_button
 @onready var music_player_node: Node = $music_player_node
+@onready var database_node: Node = $database_node
 
 #IMAGES
 func _on_image_icon_2_pressed() -> void:
@@ -74,8 +77,7 @@ func _on_picture_exit_button_pressed() -> void:
 	image_3_buttons.visible = false
 	picture_window.visible = false
 
-#Picture buttons function
-#TO-DO: add all buttons, if button x then show hint y and leave space to add to notepad
+
 
 
 #AUDIO
@@ -83,18 +85,17 @@ func _on_audio_icon_1_pressed() -> void:
 	print("audio_icon_1_pressed")
 	if music_player_node.music_player.visible == false:
 		music_player_node.music_player.visible = true
-		music_player_node.change_audio_names("Interview with Daughter","00:02:20")
+		music_player_node.change_audio_names("Interview with Daughter","00:01:30")
 		music_player_node.play_audios("daughter")
-
 func _on_audio_icon_2_pressed() -> void:
 	if music_player_node.music_player.visible == false:
 		music_player_node.music_player.visible = true
-		music_player_node.change_audio_names("Interview with Nurse","00:02:20")
+		music_player_node.change_audio_names("Interview with Nurse","00:01:02")
 		print("audio_icon_2_pressed")
 		music_player_node.play_audios("nurse")
 
 
-
+#Inside image:
 func _on_giftbox_button_pressed() -> void:
 	#TOO LONG DO STH ABOUT IT
 	giftbox_button.modulate = Color(1, 1, 1, 1)	
@@ -126,38 +127,32 @@ func _on_couch_button_pressed() -> void:
 	hint_1.show_hint("The spot where it all ended. But how did it happen?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
-
-
 func _on_tea_leaves_button_pressed() -> void:
 	hint_1.show_hint("Tea leaves...")
 	tea_leaves_button.modulate = Color(1, 1, 1, 1)	
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
-
-
 func _on_teashelf_button_pressed() -> void:
 	teashelf_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("An impressive collection, including some exotic and rare varieties.")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
-
-
 func _on_teacup_button_pressed() -> void:
 	teacup_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("The tea is still warm… Did he drink it shortly before his death?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
-
-
 func _on_chicken_button_pressed() -> void:
 	chicken_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?”")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
-
-
 func _on_towel_button_pressed() -> void:
 	towel_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("Is that a raw chicken??? Oh no, wait. It's just a towel.")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
+
+#DATABSE
+func _on_database_icon_1_pressed() -> void:
+	database_node.database_texture.visible = true

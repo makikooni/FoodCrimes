@@ -1,0 +1,172 @@
+[gd_scene load_steps=5 format=3 uid="uid://cal4f442arxuj"]
+
+[ext_resource type="Script" path="res://Scenes/database_node.gd" id="1_8ds8k"]
+[ext_resource type="Texture2D" uid="uid://dsfa6fr256kfw" path="res://Assets/Desktop/Database/database_main.png" id="2_mnm8q"]
+[ext_resource type="Texture2D" uid="uid://dsovkr6wtgebc" path="res://Assets/Desktop/Database/database_open.png" id="3_3kpbt"]
+[ext_resource type="Texture2D" uid="uid://8wx4128mnfup" path="res://Assets/Desktop/Database/lady_profile.png" id="4_bf5mu"]
+
+[node name="database_node" type="Node"]
+script = ExtResource("1_8ds8k")
+
+[node name="database_texture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 769.0
+offset_top = 300.0
+offset_right = 1182.0
+offset_bottom = 553.0
+expand_mode = 1
+
+[node name="database_main" type="TextureRect" parent="database_texture"]
+visibility_layer = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mnm8q")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="password_edit" type="LineEdit" parent="database_texture/database_main"]
+modulate = Color(0.223103, 0.223103, 0.223103, 1)
+self_modulate = Color(1, 1, 1, 0.847059)
+texture_filter = 1
+layout_mode = 0
+offset_left = 169.0
+offset_top = 151.0
+offset_right = 242.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 8
+placeholder_text = "******"
+alignment = 1
+max_length = 6
+flat = true
+
+[node name="submit_password" type="Button" parent="database_texture/database_main"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.542
+anchor_bottom = 0.813
+offset_left = 190.0
+offset_top = 180.0
+offset_right = -2.84602
+offset_bottom = -4.68901
+
+[node name="database_open" type="TextureRect" parent="database_texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3kpbt")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="medical2" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 86.5
+offset_top = -26.5
+offset_right = 125.5
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="medical" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 43.5
+offset_top = -21.5
+offset_right = 67.5
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="newspaper" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.5
+offset_top = -21.5
+offset_right = 34.5
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="profile_open" type="TextureRect" parent="database_texture/database_open"]
+visible = false
+offset_left = 64.0
+offset_top = 148.0
+offset_right = 341.0
+offset_bottom = 225.0
+texture = ExtResource("4_bf5mu")
+expand_mode = 1
+
+[node name="profile_n" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 165.0
+offset_top = 105.0
+offset_right = 193.0
+offset_bottom = 132.0
+
+[node name="profile_l" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 134.0
+offset_top = 105.0
+offset_right = 162.0
+offset_bottom = 133.0
+
+[node name="profile_g" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 102.0
+offset_top = 105.0
+offset_right = 131.0
+offset_bottom = 133.0
+
+[node name="profile_d" type="Button" parent="database_texture/database_open"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 70.0
+offset_top = 105.0
+offset_right = 98.0
+offset_bottom = 133.0
+
+[node name="exit_button" type="Button" parent="database_texture"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.85472
+anchor_top = -0.0355731
+anchor_right = -1.90799
+anchor_bottom = -0.102767
+offset_left = 1161.0
+offset_top = 9.0
+offset_right = 1197.0
+offset_bottom = 38.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="database_texture/exit_button" to="." method="_on_exit_button_pressed"]
