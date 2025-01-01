@@ -94,7 +94,7 @@ func _on_audio_icon_2_pressed() -> void:
 		print("audio_icon_2_pressed")
 		music_player_node.play_audios("nurse")
 
-
+#TO DO CUT DOWN CHICKEN TEXT AND TEA BOOK
 #Inside image:
 func _on_giftbox_button_pressed() -> void:
 	#TOO LONG DO STH ABOUT IT

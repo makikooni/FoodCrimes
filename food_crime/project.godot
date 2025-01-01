@@ -19,7 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 window/size/viewport_width=1928
 window/size/viewport_height=1087
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
 [rendering]

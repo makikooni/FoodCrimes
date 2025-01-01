@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=14 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
@@ -7,10 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://disx5powuvkas" path="res://Assets/Desktop/volume.png" id="8_43nuv"]
 [ext_resource type="Texture2D" uid="uid://bfqov65gr5abn" path="res://Assets/Desktop/calendar.png" id="9_vj6f3"]
 [ext_resource type="Texture2D" uid="uid://dkcbh2ipnfjxk" path="res://Assets/Desktop/calendar_open.png" id="10_7rrou"]
+[ext_resource type="LabelSettings" uid="uid://147rw72fgg1q" path="res://Scenes/pixellabel.tres" id="10_aiwkt"]
 [ext_resource type="Texture2D" uid="uid://de6htdf4w6jsj" path="res://Assets/Emails/emaillayout.png" id="10_mrnr3"]
 [ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="11_5mgsm"]
 [ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
 [ext_resource type="PackedScene" uid="uid://c478sx1jyxqq7" path="res://Scenes/window.tscn" id="14_c0i4t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4lk5d"]
+line_spacing = -4.0
+font = ExtResource("11_5mgsm")
+font_size = 11
+shadow_size = 0
 
 [node name="DesktopItems" type="Node"]
 script = ExtResource("1_yno3v")
@@ -127,11 +134,10 @@ offset_bottom = 10.0
 [node name="emaillayout" type="TextureRect" parent="Email"]
 unique_name_in_owner = true
 visible = false
-texture_filter = 1
 offset_left = 852.0
 offset_top = 330.0
 offset_right = 1078.0
-offset_bottom = 507.0
+offset_bottom = 515.0
 texture = ExtResource("10_mrnr3")
 expand_mode = 1
 
@@ -141,10 +147,9 @@ offset_left = 5.0
 offset_top = 24.0
 offset_right = 150.0
 offset_bottom = 55.0
-theme_override_fonts/font = ExtResource("11_5mgsm")
-theme_override_font_sizes/font_size = 10
 text = "
 Username: AX3091"
+label_settings = ExtResource("10_aiwkt")
 
 [node name="emailexitbutton2" type="Button" parent="Email/emaillayout"]
 unique_name_in_owner = true
@@ -161,24 +166,24 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 95.0
-offset_top = 151.0
+offset_top = 158.0
 offset_right = 139.0
-offset_bottom = 162.0
+offset_bottom = 169.0
 
 [node name="emailAdress" type="Label" parent="Email/emaillayout"]
 unique_name_in_owner = true
-texture_filter = 5
+texture_filter = 1
+texture_repeat = 2
 layout_mode = 0
 offset_left = 5.0
 offset_top = 2.0
 offset_right = 183.0
 offset_bottom = 40.0
-theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("11_5mgsm")
-theme_override_font_sizes/font_size = 10
 text = "From:
 Date:
 Subject:"
+label_settings = SubResource("LabelSettings_4lk5d")
+visible_characters_behavior = 1
 
 [node name="emailText" type="Label" parent="Email/emaillayout"]
 unique_name_in_owner = true
@@ -190,9 +195,9 @@ layout_mode = 0
 offset_left = 13.0
 offset_top = 66.0
 offset_right = 215.0
-offset_bottom = 137.0
-theme_override_font_sizes/font_size = 8
+offset_bottom = 142.0
 text = "Text here "
+label_settings = ExtResource("10_aiwkt")
 autowrap_mode = 3
 visible_characters_behavior = 1
 
@@ -201,9 +206,9 @@ unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 0
 offset_left = 11.0
-offset_top = 65.0
+offset_top = 70.0
 offset_right = 34.0
-offset_bottom = 88.0
+offset_bottom = 93.0
 texture = ExtResource("12_phrsv")
 expand_mode = 3
 
