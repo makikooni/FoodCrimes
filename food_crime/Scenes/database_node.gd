@@ -21,7 +21,7 @@ func _on_exit_button_pressed() -> void:
 	database_texture.visible = false 
 	
 func _on_submit_password_pressed() -> void:
-	if password_edit.text == "AX3521":
+	if password_edit.text == "AX3091":
 		database_main.visible = false
 		database_open.visible = true 
 

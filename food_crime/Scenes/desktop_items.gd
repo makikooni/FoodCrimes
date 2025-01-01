@@ -52,9 +52,9 @@ func _on_email_button_pressed() -> void:
 	email_nodes.emaillayout.visible = true #makes all children visible too
 func _on_emailexitbutton_pressed() -> void:
 	print("Email clicked")
-	email_nodes.emaillayout.visible = false
-	email_nodes.address.visible = false
+	email_nodes.address.text = "From:\nDate:\nSubject:"
 	email_nodes.text.visible = false
+	email_nodes.emaillayout.visible = false
 	if hint1_available == true:
 		await get_tree().create_timer(2).timeout
 		hint_1.show_hint("Date...")

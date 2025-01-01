@@ -2,6 +2,7 @@ extends Node
 @onready var texture_rect: TextureRect = %TextureRect
 @onready var basic_window: TextureRect = %basicWindow
 @onready var files_001_button: Button = $basicWindow/TextureRect/Files001button
+@onready var pass_exit: Button = %pass_exit
 
 @onready var button: Button = $pass_window/LineEdit/Button
 
@@ -46,3 +47,8 @@ func _on_button_pressed() -> void:
 		pass_window.visible = false
 		texture_rect.visible = false
 		folder_1_icons.visible = true
+
+
+
+func _on_pass_exit_pressed() -> void:
+	pass_window.visible = false

@@ -135,6 +135,17 @@ offset_bottom = 507.0
 texture = ExtResource("10_mrnr3")
 expand_mode = 1
 
+[node name="username" type="Label" parent="Email/emaillayout"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 24.0
+offset_right = 150.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("11_5mgsm")
+theme_override_font_sizes/font_size = 10
+text = "
+Username: AX3091"
+
 [node name="emailexitbutton2" type="Button" parent="Email/emaillayout"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
@@ -156,17 +167,18 @@ offset_bottom = 162.0
 
 [node name="emailAdress" type="Label" parent="Email/emaillayout"]
 unique_name_in_owner = true
-visible = false
 texture_filter = 5
 layout_mode = 0
-offset_left = 6.0
-offset_top = 8.0
-offset_right = 184.0
-offset_bottom = 46.0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 183.0
+offset_bottom = 40.0
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("11_5mgsm")
 theme_override_font_sizes/font_size = 10
-text = "Address here"
+text = "From:
+Date:
+Subject:"
 
 [node name="emailText" type="Label" parent="Email/emaillayout"]
 unique_name_in_owner = true

@@ -69,6 +69,13 @@ grow_vertical = 2
 texture = ExtResource("2_owuve")
 expand_mode = 1
 
+[node name="pass_exit" type="Button" parent="pass_window"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 94.0
+offset_right = 102.0
+offset_bottom = 8.0
+
 [node name="LineEdit" type="LineEdit" parent="pass_window"]
 unique_name_in_owner = true
 layout_mode = 0
@@ -100,4 +107,5 @@ text = "Submit"
 
 [connection signal="pressed" from="basicWindow/basicWindowButton" to="." method="_on_basic_window_button_pressed"]
 [connection signal="pressed" from="basicWindow/TextureRect/Files001button" to="." method="_on_files_001_button_pressed"]
+[connection signal="pressed" from="pass_window/pass_exit" to="." method="_on_pass_exit_pressed"]
 [connection signal="pressed" from="pass_window/LineEdit/Button" to="." method="_on_button_pressed"]
