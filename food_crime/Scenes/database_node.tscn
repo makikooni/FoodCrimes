@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" path="res://Scenes/database_node.gd" id="1_8ds8k"]
 [ext_resource type="Texture2D" uid="uid://dsfa6fr256kfw" path="res://Assets/Desktop/Database/database_main.png" id="2_mnm8q"]
-[ext_resource type="Texture2D" uid="uid://dsovkr6wtgebc" path="res://Assets/Desktop/Database/database_open.png" id="3_3kpbt"]
-[ext_resource type="Texture2D" uid="uid://8wx4128mnfup" path="res://Assets/Desktop/Database/lady_profile.png" id="4_bf5mu"]
+[ext_resource type="Texture2D" uid="uid://cowt0t43y27ds" path="res://Assets/Desktop/Database/database_open.png" id="3_3kpbt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gcngr"]
+load_path = "res://.godot/imported/lady_profile.png-a0cab8d762b3ac75e476e9c3b69bcdcb.ctex"
 
 [node name="database_node" type="Node"]
 script = ExtResource("1_8ds8k")
@@ -71,22 +73,8 @@ texture = ExtResource("3_3kpbt")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="medical2" type="Button" parent="database_texture/database_open"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 86.5
-offset_top = -26.5
-offset_right = 125.5
-offset_bottom = -0.5
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="medical" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -94,14 +82,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 43.5
+offset_left = 32.5
 offset_top = -21.5
-offset_right = 67.5
-offset_bottom = 7.5
+offset_right = 51.5
+offset_bottom = 4.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="newspaper" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -110,22 +99,40 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 5.5
-offset_top = -21.5
-offset_right = 34.5
-offset_bottom = 6.5
+offset_top = -18.5
+offset_right = 26.5
+offset_bottom = 5.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="staff_records" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 58.5
+offset_top = -16.5
+offset_right = 81.5
+offset_bottom = 2.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="profile_open" type="TextureRect" parent="database_texture/database_open"]
+unique_name_in_owner = true
 visible = false
 offset_left = 64.0
 offset_top = 148.0
 offset_right = 341.0
 offset_bottom = 225.0
-texture = ExtResource("4_bf5mu")
+texture = SubResource("CompressedTexture2D_gcngr")
 expand_mode = 1
 
 [node name="profile_n" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 offset_left = 165.0
 offset_top = 105.0
@@ -133,6 +140,7 @@ offset_right = 193.0
 offset_bottom = 132.0
 
 [node name="profile_l" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 offset_left = 134.0
 offset_top = 105.0
@@ -140,6 +148,7 @@ offset_right = 162.0
 offset_bottom = 133.0
 
 [node name="profile_g" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 offset_left = 102.0
 offset_top = 105.0
@@ -147,6 +156,7 @@ offset_right = 131.0
 offset_bottom = 133.0
 
 [node name="profile_d" type="Button" parent="database_texture/database_open"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 70.0
@@ -169,4 +179,12 @@ offset_right = 1197.0
 offset_bottom = 38.0
 metadata/_edit_use_anchors_ = true
 
+[connection signal="pressed" from="database_texture/database_main/submit_password" to="." method="_on_submit_password_pressed"]
+[connection signal="pressed" from="database_texture/database_open/medical" to="." method="_on_medical_pressed"]
+[connection signal="pressed" from="database_texture/database_open/newspaper" to="." method="_on_newspaper_pressed"]
+[connection signal="pressed" from="database_texture/database_open/staff_records" to="." method="_on_staff_records_pressed"]
+[connection signal="pressed" from="database_texture/database_open/profile_n" to="." method="_on_profile_n_pressed"]
+[connection signal="pressed" from="database_texture/database_open/profile_l" to="." method="_on_profile_l_pressed"]
+[connection signal="pressed" from="database_texture/database_open/profile_g" to="." method="_on_profile_g_pressed"]
+[connection signal="pressed" from="database_texture/database_open/profile_d" to="." method="_on_profile_d_pressed"]
 [connection signal="pressed" from="database_texture/exit_button" to="." method="_on_exit_button_pressed"]

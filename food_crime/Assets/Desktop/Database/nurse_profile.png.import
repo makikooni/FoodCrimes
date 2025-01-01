@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wg3027s0fjem"
-path="res://.godot/imported/lady_profile.png-a0cab8d762b3ac75e476e9c3b69bcdcb.ctex"
+uid="uid://cdisbt1nontka"
+path="res://.godot/imported/nurse_profile.png-bf696cda3c77ba7d9eca52e558fee60d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Desktop/Database/lady_profile.png"
-dest_files=["res://.godot/imported/lady_profile.png-a0cab8d762b3ac75e476e9c3b69bcdcb.ctex"]
+source_file="res://Assets/Desktop/Database/nurse_profile.png"
+dest_files=["res://.godot/imported/nurse_profile.png-bf696cda3c77ba7d9eca52e558fee60d.ctex"]
 
 [params]
 

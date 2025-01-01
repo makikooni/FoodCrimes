@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wg3027s0fjem"
-path="res://.godot/imported/lady_profile.png-a0cab8d762b3ac75e476e9c3b69bcdcb.ctex"
+uid="uid://boomwueeyq3n3"
+path="res://.godot/imported/grandpa_profile.png-b09887ee4d218d548842531126154e85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Desktop/Database/lady_profile.png"
-dest_files=["res://.godot/imported/lady_profile.png-a0cab8d762b3ac75e476e9c3b69bcdcb.ctex"]
+source_file="res://Assets/Desktop/Database/grandpa_profile.png"
+dest_files=["res://.godot/imported/grandpa_profile.png-b09887ee4d218d548842531126154e85.ctex"]
 
 [params]
 
