@@ -40,10 +40,10 @@ func _on_profile_d_pressed() -> void:
 	profile_open.texture = load("res://Assets/Desktop/Database/daughter_profile.png")
 func _on_medical_pressed() -> void:
 	profile_open.visible = true
-	profile_open.texture = load("")
+	profile_open.texture = load("res://Assets/Desktop/Database/medical_files.png")
 func _on_newspaper_pressed() -> void:
 	profile_open.visible = true
-	profile_open.texture = load("")
+	profile_open.texture = load("res://Assets/Desktop/Database/newspaper_clipping.png")
 func _on_staff_records_pressed() -> void:
 	profile_open.visible = true
-	profile_open.texture = load("")
+	profile_open.texture = load("res://Assets/Desktop/Database/medi_files.png")
