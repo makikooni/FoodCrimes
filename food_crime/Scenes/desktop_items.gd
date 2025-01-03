@@ -35,9 +35,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_notepad_button_pressed() -> void:
-	print("Notepad clicked")	
-
 
 #Files functions:
 func _on_files_button_pressed() -> void:
@@ -90,3 +87,6 @@ func _on_calendar_button_pressed() -> void:
 	cal_nodes.open_calendar.visible = true
 func _on_close_calendar_button_pressed() -> void:
 	cal_nodes.open_calendar.visible = false
+
+func _on_notepad_button_pressed() -> void:
+	print("Notepad clicked")	
