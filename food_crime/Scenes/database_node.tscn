@@ -9,6 +9,7 @@ script = ExtResource("1_8ds8k")
 
 [node name="database_texture" type="TextureRect" parent="."]
 unique_name_in_owner = true
+visible = false
 offset_left = 769.0
 offset_top = 300.0
 offset_right = 1182.0
@@ -119,6 +120,7 @@ grow_vertical = 2
 [node name="profile_open" type="TextureRect" parent="database_texture/database_open"]
 unique_name_in_owner = true
 texture_filter = 1
+layout_mode = 0
 offset_left = 64.0
 offset_top = 148.0
 offset_right = 341.0
@@ -128,6 +130,7 @@ expand_mode = 1
 [node name="profile_n" type="Button" parent="database_texture/database_open"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 165.0
 offset_top = 105.0
 offset_right = 193.0
@@ -136,6 +139,7 @@ offset_bottom = 132.0
 [node name="profile_l" type="Button" parent="database_texture/database_open"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 134.0
 offset_top = 105.0
 offset_right = 162.0
@@ -144,6 +148,7 @@ offset_bottom = 133.0
 [node name="profile_g" type="Button" parent="database_texture/database_open"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 102.0
 offset_top = 105.0
 offset_right = 131.0
@@ -163,8 +168,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -1.85472
-anchor_top = -0.0355731
+anchor_left = -1.90799
+anchor_top = -0.102767
 anchor_right = -1.90799
 anchor_bottom = -0.102767
 offset_left = 1161.0

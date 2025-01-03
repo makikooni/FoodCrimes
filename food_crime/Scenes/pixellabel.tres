@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="1_yius6"]
 
 [resource]
-line_spacing = -0.5
+line_spacing = 0.0
 font = ExtResource("1_yius6")
 font_size = 10
 shadow_size = 0

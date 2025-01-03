@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=16 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
 [ext_resource type="Texture2D" uid="uid://csp3u7rc3pp1" path="res://Assets/Desktop/notepad.png" id="3_iqwta"]
+[ext_resource type="Script" path="res://Scenes/inventory_ui.gd" id="4_04pub"]
 [ext_resource type="Texture2D" uid="uid://7k1osxt7fbja" path="res://Assets/Desktop/battery.png" id="7_ivah7"]
 [ext_resource type="Texture2D" uid="uid://disx5powuvkas" path="res://Assets/Desktop/volume.png" id="8_43nuv"]
 [ext_resource type="Texture2D" uid="uid://bfqov65gr5abn" path="res://Assets/Desktop/calendar.png" id="9_vj6f3"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://de6htdf4w6jsj" path="res://Assets/Emails/emaillayout.png" id="10_mrnr3"]
 [ext_resource type="FontFile" uid="uid://b13kwyvujdrap" path="res://Assets/PixelifySans-VariableFont_wght.ttf" id="11_5mgsm"]
 [ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
+[ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="12_w0uw6"]
 [ext_resource type="PackedScene" uid="uid://c478sx1jyxqq7" path="res://Scenes/window.tscn" id="14_c0i4t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4lk5d"]
@@ -246,6 +248,33 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 theme_type_variation = &"FlatButton"
+
+[node name="Inv" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 793.0
+offset_top = 292.0
+offset_right = 1188.0
+offset_bottom = 537.0
+texture = ExtResource("12_w0uw6")
+expand_mode = 1
+
+[node name="InventoryUI" type="Control" parent="Inv"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_04pub")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Inv/InventoryUI"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 35.0
+offset_right = 78.0
+offset_bottom = 229.0
 
 [node name="Window" parent="." instance=ExtResource("14_c0i4t")]
 

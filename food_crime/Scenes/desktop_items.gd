@@ -25,6 +25,7 @@ extends Node
 
 @onready var hint_1: Label = %Hint1
 var hint1_available = true
+@onready var inv: TextureRect = %Inv
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -53,7 +54,6 @@ func _on_emailexitbutton_pressed() -> void:
 	email_nodes.text.visible = false
 	email_nodes.emaillayout.visible = false
 	if hint1_available == true:
-		await get_tree().create_timer(2).timeout
 		hint_1.show_hint("Date...")
 		# Wait for 3 seconds
 		await get_tree().create_timer(3).timeout
@@ -69,7 +69,7 @@ func _on_email_1_button_pressed() -> void:
 	email_nodes.text.text = "I hope by now you have familiarised yourself with  your new gadget. It is time to move on and start  working on your first case.  We don’t have any time to loose. You will find all necessary files on your desktop. Key is today's date."
 	email_nodes.address.text = "From: B.O.\nDate: 1st March 1995\nSubject: Welcome"
 	new_email_texture()
-	#TO-DO: when clicked must disable all other buttons on desktop
+
 func new_email_texture():
 	#TO-DO: check for all emails inside inbox instead
 	email_nodes.email_1.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
@@ -90,3 +90,4 @@ func _on_close_calendar_button_pressed() -> void:
 
 func _on_notepad_button_pressed() -> void:
 	print("Notepad clicked")	
+	inv.visible = true

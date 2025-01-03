@@ -4,8 +4,9 @@ extends Label
 
 func show_hint(text):
 	hint_1.text = text
-	print("show hint")
 	hint_1.visible = true
+	print("show hint")
+
 	
 func hide_hint():
 	print("hint hidden")
