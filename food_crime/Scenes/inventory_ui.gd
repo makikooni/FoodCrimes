@@ -1,7 +1,9 @@
 extends Control
 @onready var inventory_container : VBoxContainer = $VBoxContainer  # Reference to VBoxContainer where buttons will go
 var inventory : Inventory
-#@onready var hint_1: Label = %Hint1
+@onready var hint_1: Label = %Hint1
+@onready var button: Button = $Button
+@onready var inv: TextureRect = %Inv
 
 
 func _ready():
@@ -32,4 +34,11 @@ func update_inventory_ui() -> void:
 # Handle button press to display clue description
 func _on_clue_button_pressed(clue: Clue) -> void:
 	print("Clue description: %s" % clue.cdescription)
-	#hint_1.show_hint(clue.cdescription)
+	hint_1.hide_hint()
+	hint_1.show_hint(clue.cdescription)
+	await get_tree().create_timer(5).timeout
+	hint_1.hide_hint()
+
+
+func _on_button_pressed() -> void:
+	inv.visible = false 

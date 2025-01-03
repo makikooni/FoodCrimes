@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bddbbaqt3vm3u"]
+[gd_scene load_steps=18 format=3 uid="uid://bddbbaqt3vm3u"]
 
 [ext_resource type="Script" path="res://Scenes/desktop_items.gd" id="1_yno3v"]
 [ext_resource type="Texture2D" uid="uid://bad2vmgo5ohd5" path="res://Assets/Desktop/files.png" id="2_cea2m"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bc2pjbgj00fca" path="res://Assets/Desktop/email.png" id="12_phrsv"]
 [ext_resource type="Texture2D" uid="uid://54645txau65d" path="res://Assets/Desktop/basic_window.png" id="12_w0uw6"]
 [ext_resource type="PackedScene" uid="uid://c478sx1jyxqq7" path="res://Scenes/window.tscn" id="14_c0i4t"]
+[ext_resource type="PackedScene" uid="uid://bb6astalm73q5" path="res://Objects/Thoughts.tscn" id="15_748f4"]
+[ext_resource type="Script" path="res://Objects/thoughts.gd" id="15_c52fn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4lk5d"]
 line_spacing = -4.0
@@ -251,7 +253,6 @@ theme_type_variation = &"FlatButton"
 
 [node name="Inv" type="TextureRect" parent="."]
 unique_name_in_owner = true
-visible = false
 offset_left = 793.0
 offset_top = 292.0
 offset_right = 1188.0
@@ -269,6 +270,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_04pub")
 
+[node name="Button" type="Button" parent="Inv/InventoryUI"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 1.0
+offset_right = 388.0
+offset_bottom = 19.0
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Inv/InventoryUI"]
 layout_mode = 0
 offset_left = 7.0
@@ -278,6 +286,18 @@ offset_bottom = 229.0
 
 [node name="Window" parent="." instance=ExtResource("14_c0i4t")]
 
+[node name="Hint1" parent="." instance=ExtResource("15_748f4")]
+unique_name_in_owner = true
+offset_left = 1270.0
+offset_top = 273.0
+offset_right = 1374.0
+offset_bottom = 619.0
+theme_override_font_sizes/font_size = 15
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters_behavior = 1
+script = ExtResource("15_c52fn")
+
 [connection signal="pressed" from="Files/FilesButton" to="." method="_on_files_button_pressed"]
 [connection signal="pressed" from="Notepad/NotepadButton" to="." method="_on_notepad_button_pressed"]
 [connection signal="pressed" from="Calendar/CalendarButton" to="." method="_on_calendar_button_pressed"]
@@ -286,3 +306,4 @@ offset_bottom = 229.0
 [connection signal="pressed" from="Email/emaillayout/emailexitbutton" to="." method="_on_emailexitbutton_pressed"]
 [connection signal="pressed" from="Email/emaillayout/Email1/Email1Button" to="." method="_on_email_1_button_pressed"]
 [connection signal="pressed" from="Email/Email/EmailButton" to="." method="_on_email_button_pressed"]
+[connection signal="pressed" from="Inv/InventoryUI/Button" to="Inv/InventoryUI" method="_on_button_pressed"]
