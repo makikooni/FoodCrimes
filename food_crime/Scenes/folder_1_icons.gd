@@ -97,6 +97,8 @@ func _on_audio_icon_2_pressed() -> void:
 		music_player_node.change_audio_names("Interview with Nurse","00:01:02")
 		print("audio_icon_2_pressed")
 		music_player_node.play_audios("nurse")
+		InventoryManager.add_clue(Clue.new("Nurse", "Calm and composed, but her role demands scrutiny."))
+		print("Clue added to inventory")
 
 #TO DO CUT DOWN CHICKEN TEXT AND TEA BOOK
 #Inside image:
@@ -106,51 +108,71 @@ func _on_giftbox_button_pressed() -> void:
 	hint_1.show_hint("A kind gesture or a subtle connection attempt? The note and gift hint at their relationship. Time to ask the neighbor about their dynamics.")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Giftbox", "A kind gesture or a subtle connection attempt? The note and gift hint at their relationship. Time to ask the neighbor about their dynamics."))
+	print("Clue added to inventory")
 func _on_syringe_button_pressed() -> void:
 	syringe_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A medical syringe—part of his treatment, or something more sinister? Could the nurse be involved?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Syringe", "A medical syringe—part of his treatment, or something more sinister? Could the nurse be involved?"))
+	print("Clue added to inventory")
 func _on_family_picture_button_pressed() -> void:
 	family_picture_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A memory captured two years ago. The man beside her… who was he?")
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Photograph", "A memory captured two years ago. The man beside her… who was he?"))
+	print("Clue added to inventory")
 func _on_knife_button_pressed() -> void:
 	knife_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A knife out in the open, taken out to clean… Or taken out for another reason?")
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Knife", "A knife out in the open, taken out to clean… Or taken out for another reason?"))
+	print("Clue added to inventory")
 func _on_book_button_pressed() -> void:
 	book_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("A book on plants and teas—personal interest, family business, or part of his daily routine?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Book", "A book on plants and teas—personal interest, family business, or part of his daily routine?"))
+	print("Clue added to inventory")
 func _on_couch_button_pressed() -> void:
 	couch_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("The spot where it all ended. But how did it happen?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Place of death", "The spot where it all ended. But how did it happen?"))
+	print("Clue added to inventory")
 func _on_tea_leaves_button_pressed() -> void:
 	hint_1.show_hint("Tea leaves...")
 	tea_leaves_button.modulate = Color(1, 1, 1, 1)	
 	await get_tree().create_timer(3).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Leaf Tea", "Recently drained tea leaves."))
+	print("Clue added to inventory")
 func _on_teashelf_button_pressed() -> void:
 	teashelf_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("An impressive collection, including some exotic and rare varieties.")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Tea collection", "An impressive collection, including some exotic and rare varieties."))
+	print("Clue added to inventory")
 func _on_teacup_button_pressed() -> void:
 	teacup_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("The tea is still warm… Did he drink it shortly before his death?")
 	await get_tree().create_timer(4).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Half-drunk tea", "The tea is still warm… Did he drink it shortly before his death?"))
+	print("Clue added to inventory")
 func _on_chicken_button_pressed() -> void:
 	chicken_button.modulate = Color(1, 1, 1, 1)	
-	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?”")
+	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
+	InventoryManager.add_clue(Clue.new("Oven", "He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?"))
+	print("Clue added to inventory")
 func _on_towel_button_pressed() -> void:
 	towel_button.modulate = Color(1, 1, 1, 1)	
 	hint_1.show_hint("Is that a raw chicken??? Oh no, wait. It's just a towel.")

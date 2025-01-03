@@ -39,7 +39,7 @@ func _on_pause_audio_pressed() -> void:
 
 func _on_stop_audio_pressed() -> void:
 	if current_track == "n":
-		daughter_audio.stop()
+		nurse_audio.stop()
 	if current_track == "d":
 		daughter_audio.stop()
 

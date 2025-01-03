@@ -41,9 +41,15 @@ func _on_profile_d_pressed() -> void:
 func _on_medical_pressed() -> void:
 	profile_open.visible = true
 	profile_open.texture = load("res://Assets/Desktop/Database/medical_files.png")
+	InventoryManager.add_clue(Clue.new("Medical files", "Mr. Jensen’s medical history appears largely unremarkable, with the primary concern being mobility issues that led to his admission. However, a closer examination reveals some details worth noting."))
+	print("Clue added to inventory")
 func _on_newspaper_pressed() -> void:
 	profile_open.visible = true
 	profile_open.texture = load("res://Assets/Desktop/Database/newspaper_clipping.png")
+	InventoryManager.add_clue(Clue.new("Old newspaper", "A dark past in the daycare’s history. Could someone be repeating old patterns?"))
+	print("Clue added to inventory")
 func _on_staff_records_pressed() -> void:
 	profile_open.visible = true
 	profile_open.texture = load("res://Assets/Desktop/Database/medi_files.png")
+	InventoryManager.add_clue(Clue.new("Staff Records", "A detailed record of the staff and residents at Mr. Jensen's home paints a picture of a small, tight-knit community. The list shows a relatively low turnover rate, with long-term staff, including a nurse who has been with Mr. Jensen for years"))
+	print("Clue added to inventory")
