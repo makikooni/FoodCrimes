@@ -12,8 +12,7 @@ var hint2_available = true
 var image_icon_pressed = 0
 @onready var audio_icon_1: Button = %audio_icon_1
 @onready var database_icon_1: Button = %database_icon_1
-
-
+signal clue_added
 @onready var image_2_buttons: TextureRect = %Image2Buttons
 @onready var image_3_buttons: TextureRect = %Image3Buttons
 @onready var image_1_buttons: TextureRect = %Image1Buttons
@@ -33,6 +32,8 @@ var image_icon_pressed = 0
 @onready var music_player_node: Node = $music_player_node
 @onready var database_node: Node = $database_node
 
+
+	
 #IMAGES
 func _on_image_icon_2_pressed() -> void:
 	print("image_icon_2_pressed")
@@ -87,6 +88,9 @@ func _on_audio_icon_1_pressed() -> void:
 		music_player_node.music_player.visible = true
 		music_player_node.change_audio_names("Interview with Daughter","00:01:30")
 		music_player_node.play_audios("daughter")
+		InventoryManager.add_clue(Clue.new("Daughter", "Her words carry sadness, but is it genuine? What is she trying to hide? There’s something more beneath the surface, something she’s not telling me."))
+		print("Clue added to inventory")
+		
 func _on_audio_icon_2_pressed() -> void:
 	if music_player_node.music_player.visible == false:
 		music_player_node.music_player.visible = true

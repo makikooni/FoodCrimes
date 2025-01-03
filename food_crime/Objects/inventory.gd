@@ -1,6 +1,6 @@
 extends Node
-
 class_name Inventory
+const InventoryUi = preload("res://Scenes/inventory_ui.gd")
 
 var clues_inventory : Array = []
 
@@ -8,7 +8,9 @@ var clues_inventory : Array = []
 func add_clue(clue: Clue) -> void:
 	clues_inventory.append(clue)
 	print("Clue added: %s" % clue.name)
-
+	#InventoryUi.update_inventory_ui()
+	#TO DO - MAKE SURE THAT U CANNOT ADD CLUE TWICE 
+	
 # Method to remove a clue from the inventory
 func remove_clue(clue_name: String) -> void:
 	for clue in clues_inventory:

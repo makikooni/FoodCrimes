@@ -218,6 +218,7 @@ expand_mode = 3
 
 [node name="Email1Button" type="Button" parent="Email/emaillayout/Email1"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -253,6 +254,7 @@ theme_type_variation = &"FlatButton"
 
 [node name="Inv" type="TextureRect" parent="."]
 unique_name_in_owner = true
+visible = false
 offset_left = 793.0
 offset_top = 292.0
 offset_right = 1188.0
@@ -271,6 +273,7 @@ grow_vertical = 2
 script = ExtResource("4_04pub")
 
 [node name="Button" type="Button" parent="Inv/InventoryUI"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 373.0
 offset_top = 1.0

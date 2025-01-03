@@ -14,6 +14,10 @@ config/name="Food_Crime"
 run/main_scene="res://Scenes/scene3.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 
+[autoload]
+
+InventoryManager="*res://Objects/inventory.gd"
+
 [display]
 
 window/size/viewport_width=1928

@@ -21,6 +21,7 @@ expand_mode = 1
 
 [node name="basicWindowButton" type="Button" parent="basicWindow"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 232.0
 offset_top = 5.0
@@ -71,6 +72,7 @@ expand_mode = 1
 
 [node name="pass_exit" type="Button" parent="pass_window"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 94.0
 offset_right = 102.0

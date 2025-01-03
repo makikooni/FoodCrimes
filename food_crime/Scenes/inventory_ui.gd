@@ -16,13 +16,14 @@ func _ready():
 	
 	# Update the inventory UI
 	update_inventory_ui()
-
+	
+	
 # Update the UI with the list of clues
 func update_inventory_ui() -> void:
 	# Clear the current UI elements
-	#inventory_container.clear()
+	for child in inventory_container.get_children():
+		child.queue_free()
 
-	
 	# Add each clue as a button in the VBoxContainer
 	for clue in inventory.clues_inventory:
 		var clue_button = Button.new()
@@ -34,11 +35,14 @@ func update_inventory_ui() -> void:
 # Handle button press to display clue description
 func _on_clue_button_pressed(clue: Clue) -> void:
 	print("Clue description: %s" % clue.cdescription)
-	hint_1.hide_hint()
+	if hint_1.visible == true:
+		hint_1.hide_hint()
 	hint_1.show_hint(clue.cdescription)
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
 
 
 func _on_button_pressed() -> void:
+	if hint_1.visible == true:
+		hint_1.hide_hint()
 	inv.visible = false 
