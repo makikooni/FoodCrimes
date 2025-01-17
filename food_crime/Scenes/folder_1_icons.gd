@@ -168,10 +168,10 @@ func _on_teacup_button_pressed() -> void:
 	print("Clue added to inventory")
 func _on_chicken_button_pressed() -> void:
 	chicken_button.modulate = Color(1, 1, 1, 1)	
-	hint_1.show_hint("He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?")
+	hint_1.show_hint("He was cooking an ordinary task on an ordinary day. Was he expecting company, making a meal for himself, or simply following his routine?")
 	await get_tree().create_timer(5).timeout
 	hint_1.hide_hint()
-	InventoryManager.add_clue(Clue.new("Oven", "He was in the middle of cooking—a seemingly ordinary activity for an ordinary day. He wasn't planning to leave. Was he expecting company, preparing a meal for himself, or just settling into his routine?"))
+	InventoryManager.add_clue(Clue.new("Oven", "He was cooking an ordinary task on an ordinary day. Was he expecting company, making a meal for himself, or simply following his routine?"))
 	print("Clue added to inventory")
 func _on_towel_button_pressed() -> void:
 	towel_button.modulate = Color(1, 1, 1, 1)	
