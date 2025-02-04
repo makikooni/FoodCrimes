@@ -55,6 +55,7 @@ offset_right = -2.84602
 offset_bottom = -4.68901
 
 [node name="database_open" type="TextureRect" parent="database_texture"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

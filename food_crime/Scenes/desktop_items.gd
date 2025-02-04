@@ -90,4 +90,4 @@ func _on_close_calendar_button_pressed() -> void:
 
 func _on_notepad_button_pressed() -> void:
 	print("Notepad clicked")	
-	inv.visible = true
+	#inv.visible = true
